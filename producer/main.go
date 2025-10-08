@@ -11,7 +11,7 @@ import (
 
 func main() {
 	writer := kafka.NewWriter(kafka.WriterConfig{
-		Brokers:  []string{"host.docker.internal:9092"}, // ✅ ganti ke 9092
+		Brokers:  []string{"host.docker.internal:9092"},
 		Topic:    "demo-topic",
 		Balancer: &kafka.LeastBytes{},
 	})
